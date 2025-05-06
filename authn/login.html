@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
+      <button type="submit">Login</button>
+    </form>
+    <p><a href="forgot.html">Lupa Password?</a></p>
+    <p>Belum punya akun? <a href="signup.html">Daftar di sini</a></p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

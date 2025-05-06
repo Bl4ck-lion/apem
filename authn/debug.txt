@@ -1,0 +1,37 @@
+Array
+(
+    [0] => Array
+        (
+            [nama] => TRYOUT2
+            [email] => akademipemula24@gmail.com
+            [hp] => 085859314712
+            [sekolah] => MAN Insan Cendekia
+            [bidang] => IPS
+            [jenis] => gratis
+            [username] => hdjnjf
+            [password] => kjnjsn
+        )
+
+    [1] => Array
+        (
+            [bukti_gratis] => Array
+                (
+                    [name] => arfecta.jpg
+                    [type] => image/jpeg
+                    [tmp_name] => C:\xampp\tmp\php35E7.tmp
+                    [error] => 0
+                    [size] => 51560
+                )
+
+            [bukti_bayar] => Array
+                (
+                    [name] => 
+                    [type] => 
+                    [tmp_name] => 
+                    [error] => 4
+                    [size] => 0
+                )
+
+        )
+
+)

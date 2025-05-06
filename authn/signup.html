@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+     <input type="text" id="signupName" placeholder="Nama Lengkap" required />
+     <input type="email" id="signupEmail" placeholder="Email" required />
+     <input type="password" id="signupPassword" placeholder="Password" required />
+     <span class="toggle-password" onclick="togglePassword('signupPassword', this)">👁️</span>
+      <button type="submit">Register</button>
+    </form>
+    <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
