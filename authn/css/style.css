@@ -1,0 +1,127 @@
+/* ======= Base Color Theme ======= */
+:root {
+  --bg-color: #e0f3ff;
+  --text-color: #000000;
+  --button-bg: #0077c2;
+  --button-text: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ======= Container ======= */
+.container {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  width: 100%;
+  max-width: 360px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* ======= Typography ======= */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ======= Form Inputs ======= */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  font-size: 14px;
+}
+
+/* ======= Button Styles ======= */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* ======= Header Buttons (top right corner style) ======= */
+.top-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-buttons a {
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.top-buttons a.login {
+  border: 2px solid #333;
+  color: #333;
+  background-color: transparent;
+}
+
+.top-buttons a.signup {
+  background-color: #ffe600;
+  color: #000;
+  border: none;
+}
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
