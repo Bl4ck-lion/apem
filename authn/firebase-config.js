@@ -1,12 +1,1 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyAyAUBG_b6XKRs53EecDO2Ydx2fHECi4jc",
-  authDomain: "apem-web-e25da.firebaseapp.com",
-  projectId: "apem-web-e25da",
-  storageBucket: "apem-web-e25da.appspot.com",
-  messagingSenderId: "207549694094",
-  appId: "1:207549694094:web:75f708c0cf6282048709df",
-  measurementId: "G-LE26XQ4JXY",
-  databaseURL: "https://apem-web-e25da-default-rtdb.asia-southeast1.firebasedatabase.app/" // ini ditambahkan
-};
-
-firebase.initializeApp(firebaseConfig);
+function _0x585a(_0x3ff876,_0x95a337){const _0x512429=_0x5124();return _0x585a=function(_0x585a63,_0x4fe9a9){_0x585a63=_0x585a63-0x12e;let _0x1831de=_0x512429[_0x585a63];return _0x1831de;},_0x585a(_0x3ff876,_0x95a337);}const _0x9a8098=_0x585a;(function(_0x2d41cf,_0x5daebd){const _0x1e27db=_0x585a,_0x168792=_0x2d41cf();while(!![]){try{const _0x12b6d8=-parseInt(_0x1e27db(0x135))/0x1+parseInt(_0x1e27db(0x12e))/0x2*(-parseInt(_0x1e27db(0x138))/0x3)+parseInt(_0x1e27db(0x133))/0x4+parseInt(_0x1e27db(0x13b))/0x5*(-parseInt(_0x1e27db(0x131))/0x6)+parseInt(_0x1e27db(0x132))/0x7+-parseInt(_0x1e27db(0x137))/0x8+-parseInt(_0x1e27db(0x13c))/0x9*(-parseInt(_0x1e27db(0x13f))/0xa);if(_0x12b6d8===_0x5daebd)break;else _0x168792['push'](_0x168792['shift']());}catch(_0x15b741){_0x168792['push'](_0x168792['shift']());}}}(_0x5124,0xb79b8));const firebaseConfig={'apiKey':'AIzaSyAyAUBG_b6XKRs53EecDO2Ydx2fHECi4jc','authDomain':_0x9a8098(0x139),'projectId':_0x9a8098(0x130),'storageBucket':_0x9a8098(0x136),'messagingSenderId':_0x9a8098(0x134),'appId':_0x9a8098(0x13a),'measurementId':_0x9a8098(0x12f),'databaseURL':_0x9a8098(0x13e)};function _0x5124(){const _0x178395=['1941IxpOFV','apem-web-e25da.firebaseapp.com','1:207549694094:web:75f708c0cf6282048709df','5yVEgpc','27Ljyiyk','initializeApp','https://apem-web-e25da-default-rtdb.asia-southeast1.firebasedatabase.app/','7698570PZBnBT','3334OlJTCG','G-LE26XQ4JXY','apem-web-e25da','3583470glXPax','9811795iuRcZB','1178740mvRPry','207549694094','645805Eipmek','apem-web-e25da.appspot.com','7458288CYmNZd'];_0x5124=function(){return _0x178395;};return _0x5124();}firebase[_0x9a8098(0x13d)](firebaseConfig);
