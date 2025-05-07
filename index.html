@@ -4,6 +4,70 @@
    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>APEM – Akademi Pemula</title>
+  <style>
+   html {
+  scroll-behavior: smooth;
+    }
+     :root {
+      --primary: #A0D8F1;
+      --accent-yellow: #FFEA00;
+      --accent-purple: #C700FF;
+      --dark: #2E2E2E;
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font-body); background:linear-gradient(135deg,#A0D8F1 0%,#FFFFFF 100%); color:var(--dark); overflow-x:hidden; }
+
+    /* BUILT-IN BACKGROUND WRAPPER */
+    .bg-wrapper {
+      background: linear-gradient(135deg,#A0D8F1 0%,#FFFFFF 100%);
+      background-image: url('background.png');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+    .bg-wrapper > header,
+    .bg-wrapper > .hero-container,
+    .bg-wrapper > #tryout,
+    .bg-wrapper > #about,
+    .bg-wrapper > #team {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1,h2,h3,button { font-family:var(--font-heading); }
+    img { max-width:100%; display:block; }
+    button { cursor:pointer; border:none; border-radius:24px; transition:transform .3s ease; }
+    button:hover { transform:scale(1.03); }
+    .glass { background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); border-radius:24px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
+    .visible { opacity:1; transform:translateY(0); }
+    /* HEADER & HERO */
+    header { position:fixed; top:0;width:100%;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);z-index:100; }
+    .logo img { height:48px; }
+    nav { display:flex; gap:16px; }
+    .btn-outline { background: transparent; border: 2px solid rgba(0, 0, 0, 0.6);  color: rgba(0, 0, 0, 0.8); padding: 8px 16px; transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;}
+    .btn-outline:hover { background-color: rgba(0, 0, 0, 0.05); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); transform: scale(1.03);}
+    .btn-yellow { background: var(--accent-yellow); color: var(--dark); padding: 8px 16px; border-radius: 24px; transition: box-shadow 0.3s ease, transform 0.3s ease;}
+    .btn-yellow:hover { box-shadow: 0 0 2px var(--accent-yellow), 0 0 2px var(--accent-yellow), 0 0 2px var(--accent-yellow); transform: scale(1.03);}
+    .hamburger { display:none; font-size:24px; background:transparent; color:white; }
+    .hero-container { display:flex; justify-content:space-between; align-items:center; height:100vh; padding:0 5%; }
+    .hero-text { max-width:50%; color:white; }
+    .hero-text h1 { font-size:64px; margin-bottom:16px; }
+    .hero-text p { font-size:24px; margin-bottom:32px; }
+    .hero-text .buttons { display:flex; gap:16px; flex-wrap:wrap; }
+    .btn-primary { background:#026AAB;color:white;padding:16px 32px;font-size:18px; }
+    .btn-primary:hover { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.15); transform: scale(1.05);}
+    .hero-mascot { max-width:30%; }
+
+    /* TRYOUT & LESSON */
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEM – Akademi Pemula</title>
   <link rel="icon" href="logo-apem.png" type="image/png" />
   <style>
    html {
@@ -66,6 +130,8 @@
     #tryout { padding:80px 5%; }
     .section-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
     #tryout h2 { font-family:'Permanent Marker',cursive; color:white; font-size:36px; }
+    #tryout .carousel .card { flex: none;  width: 220px;}
+    #tryout .carousel .card img { width: 100%; max-height: 1024px; object-fit: cover; border-radius: 12px;}
     .view-all { color:white; font-size:16px; }
     .carousel { display:flex; overflow-x:auto; gap:24px; padding-bottom:16px; scroll-snap-type:x mandatory; }
     .card { flex:none; scroll-snap-align:start; }
@@ -211,6 +277,314 @@
         <h3>Tryout Season!</h3>
         <p>Semua Mapel (SMA)</p>
 <button id="SignupBtn" class="btn-purple">Daftar</button>
+      </div>
+      <!-- Tambah kartu lain -->
+    </div>
+  </section>
+
+ <!-- ABOUT -->
+  <section id="about">
+    <div class="content glass fade-in">
+      <div class="about-img">
+        <img src="logo-apem.png" alt="Logo APEM">
+      </div>
+      <div class="about-text">
+        <h2>ABOUT APEM</h2>
+        <p>Misi: Memberikan pelatihan berkualitas bagi pemula. <br> Visi: Menjadi akademi terdepan dalam pengembangan potensi. <br> Nilai: Kreativitas, kolaborasi, dan inovasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HTML: letakkan di section #team -->
+<section id="team">
+  <h2>SESEPUH</h2>
+  <p class="subtitle">Meet the team</p>
+
+  <div class="team-slider-wrapper" style="position: relative; overflow: hidden; padding: 0 40px;">
+    <!-- Tombol panah kiri -->
+    <button id="prevTeam" 
+            style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); z-index: 2; background: var(--accent-purple); border: none; border-radius: 50%; width: 32px; height: 32px; color: white; cursor: pointer;">‹</button>
+
+    <!-- Container yang di-scroll -->
+    <div class="team-slider" style="display: flex; gap: 24px; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 16px;">
+      <!-- Contoh kartu -->
+      <div class="card glass" style="min-width: 200px;">
+        <img src="team1.jpg" alt="Anggota 1">
+        <h3>Ardia Mustika</h3>
+        <p>Sie Bendahara APEM<br> Pengajar OSN Ekonomi</p>
+        
+      </div>
+      <!-- …kartu lain… -->
+      <div class="card glass" style="min-width: 200px;">
+        <img src="team2.jpg" alt="Muhammad Ismail Muzammil">
+        <h3>Muhammad Ismail Muzammil</h3>
+        <p>CEO Akademi Pemula<br> Pengajar OSN Kebumian </p>
+      
+      </div>
+     <!-- …kartu lain… -->
+      <div class="card glass" style="min-width: 200px;">
+        <img src="team3.jpg" alt="Rama Agung Supriyadi">
+        <h3>Rama Agung Supriyadi</h3>
+        <p>Founder Akademi Pemula<br> Developer APEM <br> Pengajar Informatika </p>
+      
+      </div>
+
+    <!-- Tombol panah kanan -->
+    <button id="nextTeam" 
+            style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); z-index: 2; background: var(--accent-purple); border: none; border-radius: 50%; width: 32px; height: 32px; color: white; cursor: pointer;">›</button>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+  <section id="faq">
+    <h2 class="fade-in">FAQ</h2>
+    <p class="subtitle fade-in">Frequently Asked Questions</p>
+    <div class="search fade-in">
+      <div class="glass">
+        <input type="text" placeholder="Cari pertanyaan...">
+        <span class="icon">🔍</span>
+      </div>
+    </div>
+    <div class="accordion fade-in">
+      <div class="faq-item">
+        <div class="glass question"><h3>Apa itu APEM?</h3><span class="arrow">+</span></div>
+        <div class="answer"><p>APEM adalah Akademi Pemula yang fokus melatih siswa dari nol hingga mahir.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="glass question"><h3>Bagaimana cara daftar?</h3><span class="arrow">+</span></div>
+        <div class="answer"><p>Klik tombol "Daftar" pada event yang diinginkan, lalu isi formulir.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social fade-in">
+      <a href="#">🐦</a><a href="#">📘</a><a href="#">📸</a>
+    </div>
+    <small>© 2025 APEM Akademi Pemula</small>
+  </footer>
+
+  <script>
+    const prevBtn = document.getElementById('prevTeam');
+    const nextBtn = document.getElementById('nextTeam');
+    const slider  = document.querySelector('.team-slider');
+    const scrollAmount = 166; // card width (150px) + gap (16px)
+
+    nextBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+    prevBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: -scrollAmount, beahavior: 'smooth' });
+    });
+ 
+    // Fade-in on scroll
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold:0.1 });
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+     // Toggle FAQ
+    document.querySelectorAll('.question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const ans  = q.nextElementSibling;
+        item.classList.toggle('active');
+        if (ans.style.maxHeight) {
+          ans.style.maxHeight = null;
+        } else {
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      });
+    });
+// SCROLL
+  document.addEventListener('DOMContentLoaded', () => {
+    // ambil tombol
+    const btnOurEvent  = document.getElementById('btnOurEvent');
+    const btnLearnMore = document.getElementById('btnLearnMore');
+
+    // tambahkan listener
+    btnOurEvent.addEventListener('click', () => {
+      document
+        .getElementById('tryout')
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+
+    btnLearnMore.addEventListener('click', () => {
+      document
+        .getElementById('about')
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+    // Hamburger
+    document.querySelector('.hamburger').addEventListener('click',()=>{const n=document.querySelector('nav');n.style.display=n.style.display==='flex'?'none':'flex';});
+// Tombol Login
+document.getElementById('loginBtn').addEventListener('click', e => {
+  e.preventDefault();
+  window.open(
+    'authn/login.html',
+    'LoginWindow',
+    'width=500,height=600,top=100,left=100,resizable=yes,scrollbars=yes'
+  );
+});
+
+// Tombol Sign Up
+document.getElementById('signupBtn').addEventListener('click', e => {
+  e.preventDefault();
+  window.open(
+    'authn/signup.html',
+    'SignupWindow',
+    'width=500,height=600,top=100,left=100,resizable=yes,scrollbars=yes'
+  );
+});
+
+  </script>
+</body>
+</html>
+
+    .view-all { color:white; font-size:16px; }
+    .carousel { display:flex; overflow-x:auto; gap:24px; padding-bottom:16px; scroll-snap-type:x mandatory; }
+    .card { flex:none; scroll-snap-align:start; }
+    .card.glass { padding:16px; border-radius:24px; }
+    .card img { border-radius:16px; margin-bottom:12px; }
+    .card h3 { font-size:20px; margin-bottom:8px; }
+    .card p { font-size:14px; margin-bottom:12px; }
+    .card button { background:var(--accent-purple); color:white; padding:8px 16px; }
+
+    /* ABOUT */
+    #about { padding:80px 5%; background:url('mountains.svg') no-repeat center/cover; }
+    #about .content { display:flex; align-items:center; justify-content:center; gap:24px; max-width:900px; margin:auto; padding:32px; }
+    #about .about-img img { width:150px; }
+    #about .about-text { max-width:600px; }
+    #about .about-text h2 { font-size:32px; color:var(--dark); margin-bottom:16px; }
+    #about .about-text p { font-size:18px; line-height:1.6; color:var(--dark); }
+
+  /* TEAM */
+
+    #team { padding:80px 5%; text-align:center; }
+    #team h2 { font-size:36px; text-shadow:0 0 8px var(--accent-yellow); margin-bottom:8px; }
+    #team .subtitle { color: #2E2E2E;  margin-bottom: 24px;}
+    .team-slider {
+      display:flex;
+      overflow-x:auto;
+      gap:24px;
+      padding-bottom:16px;
+      scroll-snap-type:x mandatory;
+      /* custom scrollbar for modern browsers */
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent-yellow) rgba(255,255,255,0.1);
+    }
+    .team-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+    .team-slider::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+    .team-slider::-webkit-scrollbar-thumb {
+      background: var(--accent-yellow);
+      border-radius: 4px;
+    }
+    .team-slider .card {
+      width:200px;
+      flex:none;
+      scroll-snap-align:start;
+    }
+    .team-slider .card.glass { padding:16px; border-radius:24px; }
+    .team-slider img { width:100%; height:auto; border-radius:16px; margin-bottom:12px; }
+    .team-slider h3 { font-size:18px; margin-bottom:4px; }
+    .team-slider p { font-size:14px; color:var(--dark); }
+
+/* FAQ */
+    #faq { padding:80px 5%; background:var(--dark); color:white; }
+    #faq h2 { font-size:32px; text-align:center; margin-bottom:8px; }
+    #faq .subtitle { color:rgba(255,255,255,0.8); text-align:center; margin-bottom:24px; }
+    /* Search bar design */
+    .search { max-width:400px; margin:0 auto 32px; position:relative; }
+    .search .glass {
+      display:flex; align-items:center; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); padding:8px 16px; border-radius:24px;
+    }
+    .search input {
+      width:100%; background:transparent; border:none; outline:none;
+      font-family:var(--font-heading); font-size:16px; color:white;
+    }
+    .search input::placeholder { color:rgba(255,255,255,0.7); font-family:var(--font-heading); }
+    .search .icon { margin-left:8px; font-size:20px; color:white; }
+
+    .accordion { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:20px; }
+    .faq-item { }
+    .faq-item .glass {
+      padding:16px; border-radius:18px; position:relative; overflow:hidden;
+    }
+    .faq-item .question {
+      display:flex; justify-content:space-between; align-items:center;
+      cursor:pointer;
+    }
+    .faq-item .question h3 { font-size:18px; color:white; }
+    .faq-item .question .arrow {
+      font-size:24px; color:var(--accent-yellow); transition:transform .3s;
+    }
+    .faq-item.active .question .arrow { transform:rotate(45deg); }
+    .faq-item .answer {
+      max-height:0; overflow:hidden; transition:max-height .3s ease;
+      margin-top:8px; color:var(--dark); background:rgba(255,255,255,0.9); padding:0 16px; border-radius:16px;
+    }
+
+ /* Floating icons */
+    #scrollTop, #waLink {
+      position:fixed;
+      bottom:20px;
+      z-index:1000;
+      animation: float 3s ease-in-out infinite;
+    }
+    #scrollTop { right:20px; }
+    #waLink { left:20px; }
+    #scrollTop img, #waLink img { width:50px; }
+
+    /* FOOTER */
+    footer { padding:32px 5%; background:linear-gradient(135deg,#2E2E2E 0%,#1A1A1A 100%); text-align:center; }
+    .social { display:flex; justify-content:center; gap:16px; margin-bottom:16px; }
+    .social a { width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:var(--accent-purple); border-radius:50%; }
+    footer small { font-size:14px; color:rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width:1024px) { .carousel .card { width:45%; } .team-slider .card { width:150px; } }
+    @media (max-width:768px) { nav{display:none;} .hamburger{display:block;} .hero-container{flex-direction:column;justify-content:center;} .hero-mascot{display:none;} }
+    @media (max-width:480px) { .carousel{flex-wrap:nowrap;} .carousel .card, .team-slider .card{min-width:90%;margin:0 auto;} .hero-text h1{font-size:32px;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="logo-apem.png" alt="Logo APEM"></div>
+<nav>
+  <button id="loginBtn" class="btn-outline">Login</button>
+  <button id="signupBtn" class="btn-yellow">Sign Up</button>
+</nav>
+    <button class="hamburger">☰</button>
+  </header>
+
+  <section class="hero-container">
+    <div class="hero-text fade-in">
+      <h1>APEM</h1>
+      <h2>Akademi Pemula</h2>
+      <p>Siap melatih dari pemula, jadi sepuh tingkat dewa</p>
+      <div class="buttons">
+        <button id="btnLearnMore" class="btn-primary">Learn More</button>
+        <button id="btnOurEvent" class="btn-outline">Our Event</button>
+      </div>
+    </div>
+    <div class="hero-mascot fade-in"><img src="mascot-apem.png" alt="Maskot APEM"></div>
+  </section>
+
+  <section id="tryout">
+    <div class="section-header fade-in">
+      <h2>TRYOUT & LESSON</h2>
+      <a href="#" class="view-all">View All</a>
+    </div>
+    <div class="carousel">
+      <div class="card glass fade-in">
+        <img src="tryout-season.png" alt="Tryout Season">
+        <h3>Tryout Season!</h3>
+        <p>Jan - Feb 2025</p>
+        <button>Daftar</button>
       </div>
       <!-- Tambah kartu lain -->
     </div>
